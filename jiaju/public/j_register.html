@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/comm.css">
+		<link rel="stylesheet" href="css/register.css">
+	</head>
+	<body>
+		<div id="reg">
+			<div class="ani-img">
+			</div>
+
+
+<!-- 登录 -->
+			<div class="ani-reg">
+				<ul class="tab-ul">
+					<li><h2>用户登录</h2></li>
+					<li class="tab-li-a"><a href="#">用户注册</a></li>
+				</ul>
+				<ul>
+					<li><hr></li>
+				</ul>
+				<ul>
+					<li><input class="input" onblur="no_uname()" onfocus="g_uname()" type="text" id="uname" placeholder="用户名" maxlength="12"></li>
+				</ul>
+				<ul>
+					<li class="tab-s"><span id="s_uname"></span></li>
+				</ul>
+				<ul>
+					<li><input class="input" onblur="no_upwd()" onfocus="g_upwd()" type="password" id="upwd" placeholder="密码" maxlength="18"></li>
+				</ul>
+				<ul>
+					<li class="tab-s"><span id="s_upwd"></span></li>
+				</ul>
+				<ul class="tab-ul">
+					<li class="tab-li-a"><a href="#">忘记密码</a></li>
+				</ul>
+				<ul>
+					<li><button class="but" onclick="log()">登录</button></li>
+				</ul>
+			</div>
+		</div>
+
+
+		<script>
+		//获取焦点
+			function g_uname(){
+				s_uname.innerHTML="用户名6~12";
+			}
+			function g_upwd(){
+				s_upwd.innerHTML="密码6~18";
+			}
+		//失去焦点
+			function no_uname(){
+				if (uname.value)
+				{
+					if (uname.value.length>=6)
+					{
+						s_uname.innerHTML="用户名长度符合";
+					}else{
+						s_upwd.innerHTML="用户名长度不符";
+					}
+				}else{
+					s_uname.innerHTML="用户名不能为空";
+				}
+			}
+			function no_upwd(){
+				if (upwd.value)
+				{
+					if (upwd.value.length>=6)
+					{
+						s_upwd.innerHTML="密码长度符合";
+					}else{
+						s_upwd.innerHTML="密码长度不符";
+					}
+				}else{
+					s_upwd.innerHTML="密码不能为空";
+				}
+			}
+		//登录验证
+			function log(){
+				//获取用户id
+				var u_uname=uname.value;
+				var u_upwd=upwd.value;
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function (){
+					if (xhr.readyState==4&&xhr.status==200)
+					{
+						var result=xhr.responseText;
+						alert(result);
+					}
+				}
+				xhr.open("post","http://127.0.0.1:8080/user/login",true);
+				//创建请求主体
+				var formdate="uname="+u_uname+"&upwd="+u_upwd;
+				//设置请求消息头
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				xhr.send(formdate);
+			}
+		</script>
+
+
+
+	</body>
+</html>
+
+
+
+
+
+
+
+

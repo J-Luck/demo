@@ -1,0 +1,201 @@
+/**/
+body{background-color:#f2f2f2; }
+.white{background-color: #fff;}
+.padd{padding: 30px;}
+.top{width: 1200px;
+    margin: auto;
+    font-size: 14px;color: #969696;
+    height: 39px;
+    line-height: 39px;
+    border-top: 1px solid #ccc;
+    padding: 0 120px;
+}
+.top>span>a{color: #969696;
+    font-size: 14px;
+}
+.top>span>a:visited{color: #969696;}
+.top>span{margin-right:10px; 
+    font-size: 14px;
+}
+
+/*banner透明背景*/
+.banner{width:1200px;height: 350px;
+    position:relative;
+    margin: auto;
+}
+
+.ban-parlour{
+    background-image: url("../image/all/livingroom-bg.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.ban-bedroom{
+    background-image: url("../image/all/bg_pro2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ban-kitchen{
+    background-image: url("../image/all/diningroom-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ban-cuisine{
+    background-image: url("../image/all/kitchenroom-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.ban-bath{
+    background-image: url("../image/all/showerroom-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.banner>.ban-img{
+    width:1200px;height: 350px;
+    position:absolute;
+    top: 0;
+    z-index:1;
+}
+.banner>.ban-text{width: 600px;height: 75px;
+    color: #ff8500;
+    text-align: center;
+    position:absolute;
+    top: 160px; left: 34%;
+    z-index: 3;
+}
+.banner>.ban-text>h1{
+    font-size:28px;
+}
+.banner>.ban-text>span{
+    font:16px Raleway;
+}
+
+/*shop*/
+.com-list{border:1px solid #808080; 
+	width:1140px;
+	margin:0 auto;
+	margin-bottom:30px;
+}
+.com-list>ul{
+	padding-left:30px;
+	height:31px;
+}
+ .com-list>ul>li{float:left;}
+.com-list>ul>li>a{height:31px;line-height:31px;
+	padding:9px 12px;
+	font-size:14px; color:#808080;
+}
+.com-list>ul>li>a:hover{
+	background-color:#fd5820;
+	color:#fff;
+}
+
+.shop{
+    width:1140px;
+    margin:auto;
+}
+.shop>.shop-title{
+    width:100%; height: 50px;
+    line-height: 50px;
+    padding: 20px 0 30px;
+}
+.shop-title::after{
+    contain: "";
+    clear: both;
+    display: block;
+}
+.shop>.shop-title>.shop-title-left{
+    float: left;
+}
+.shop>.shop-title>.shop-title-left>.left-h3{
+    font: 20px Raleway;
+    font-weight: bold;
+    color: #222;
+   
+}
+.shop>.shop-title>.shop-title-right{
+    width:300px; height: 39px;
+    line-height: 39px;
+    float: right;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-top: 5px;
+}
+.shop-title-right>input{
+    width: 247px; height: 17px;
+    padding-left: 5px;
+    border: 0;
+}
+.shop-title-right>a>img{
+    width:15px;
+}
+/*商品部分*/
+.com-shop{width:1140px;
+    text-align: center;
+}
+.com-shop ul::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.com-shop ul>li{float:left;
+	width:25%;
+	padding-bottom:50px;
+}
+.com-shop ul>li img{
+	width:285px; height:285px;
+}
+.com-shop ul>li>a>img:hover{
+	transition: all .3s linear;
+	transform:scale(1.1);
+}
+.com-shop-name{
+	padding:6px 0;
+}
+.com-shop-name>a{font-size:13px;
+	color:rgb(136,136,136);
+}
+.com-shop-price{
+	font-size:22px; color:#191919;
+}
+/*about*/
+.titles{width: 1410px; margin:auto;   padding: 20px;}
+.titles::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.title-left{float: left;
+    width: 955px;
+    padding: 50px;
+    padding-bottom: 153px;
+}
+.title-right{float: right; width: 350px;}
+.title-left>h2{font-size: 20px;
+    color: #fd5820;
+ 
+}
+.title-left>span{color: black; font-size:12px;
+    padding-top: 12px;
+    padding-bottom: 30px;
+    display: block;
+}
+.title-left>p{color:#999; font-size:14px;
+    padding-bottom: 20px;
+}
+.title-right>img{width: 350px;}
+.title-right>div{width: 50%; 
+    float: left;
+    text-align: center;}
+.title-right>div>p,span{font-size: 8px;}
+.title-right>div>a>img{width: 120PX; padding: 5px;
+    transition: all .3s linear;
+}
+.title-right>div>a>img:hover{
+	transform:scale(1.1);
+}

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="css/comm.css">
+		<link rel="stylesheet" href="css/login.css">
+	</head>
+	<body>
+		<div id="reg">
+			<div class="ani-img">
+			</div>	
+			
+			<div class="log">
+				<ul>
+					<li><h3>用户注册</h3></li>
+					<li><input class="li-in" onblur="no_uname()" onfocus="get_uname()" type="text" id="uname" placeholder="请输入用户名"></li>
+					<li class="li-sp"><span id="s_uname"></span></li>
+
+					<li><input onblur="no_upwd()" onfocus="get_upwd()" type="password" id="upwd" placeholder="请输入密码" maxlength="12"></li>
+					<li class="li-sp"><span id="s_upwd"></span></li>
+
+					<li><input onblur="no_cpwd()" onfocus="get_cpwd()" type="password" id="cpwd" placeholder="请确认密码" maxlength="12"></li>
+					<li class="li-sp"><span id="s_cpwd"></span></li>
+	
+					<li><input onblur="no_phone()" onfocus="get_phone()" type="text" id="phone" placeholder="请输入手机号" maxlength="11"></li>
+					<li class="li-sp"><span id="s_phone"></span></li>
+					<li class="but1"><button class="but1" onclick="user_reg()" style="width:170px">注册</button></li>
+				</ul>
+			</div>
+		</div>
+
+		<script>
+		//获取焦点
+			function get_uname(){ s_uname.innerHTML="用户名长度6~12位"	}
+			function get_upwd(){ s_upwd.innerHTML="密码长度6~12位"	}
+			function get_cpwd(){ s_cpwd.innerHTML="确认密码"	}
+			function get_phone(){ s_phone.innerHTML="手机号"	}
+		//失去焦点
+			function no_uname(){
+				if (uname.value)
+				{
+					if (uname.value.length>=6&&uname.value.length<=12)
+					{
+						no_uname()
+					}else{ s_uname.innerHTML="用户名格式错误";}
+				}else{s_uname.innerHTML="请输入用户名";}
+			}
+			function no_upwd(){
+				if (upwd.value)
+				{
+					if (upwd.value.length>=6&&upwd.value.length<=12)
+					{
+						s_upwd.innerHTML="密码格式正确";
+					}else{ s_upwd.innerHTML="密码格式错误";}
+				}else{s_upwd.innerHTML="请输入密码";}
+			}
+			function no_cpwd(){
+				if (cpwd.value)
+				{
+					if (cpwd.value==upwd.value)
+					{
+						s_cpwd.innerHTML="密码一致";
+					}else{ s_cpwd.innerHTML="两次密码不一致";}
+				}else{s_cpwd.innerHTML="请确认密码";}
+			}
+			function no_phone(){
+				if (phone.value)
+				{
+					if (phone.value.length==11)
+					{
+						s_phone.innerHTML="手机号格式正确";
+					}else{ s_phone.innerHTML="手机号格式错误";}
+				}else{s_phone.innerHTML="请输入手机号";}
+			}
+		
+		//用户名交互
+			function no_uname(){
+				var u_uname=uname.value;
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+					if (xhr.readyState==4&&xhr.status==200)
+					{
+						var result=xhr.responseText;
+						s_uname.innerHTML=result;
+					}
+				}
+				xhr.open("post","http://127.0.0.1:8080/user/reg_user",true);
+				//创建请求主体
+				var formdate="&uname="+u_uname;
+				//设置请求消息头
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				xhr.send(formdate);
+			}
+
+		//用户注册
+			function user_reg(){
+				//获取要查询的id
+				var u_uname=uname.value;
+				var u_upwd=upwd.value;
+				var u_phone=phone.value;
+				//1.创建xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.监听获取响应数据
+				xhr.onreadystatechange=function(){
+					if (xhr.readyState==4&&xhr.status==200)
+					{
+						var result=xhr.responseText;
+						alert(result);
+					}
+				}
+				//2创建请求
+				xhr.open("post","http://127.0.0.1:8080/user/reg",true);
+				//创建请求主体
+				var formdate="&uname="+u_uname+"&upwd="+u_upwd+"&phone="+u_phone;
+				//设置请求消息头
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				//3发送请求
+				xhr.send(formdate);
+			}
+
+
+		</script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+

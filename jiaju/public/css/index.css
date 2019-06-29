@@ -1,0 +1,323 @@
+*{margin:0px;padding:0px;}
+a{text-decoration:none;}
+ul{list-style:none;}
+
+
+/*	公共样式	*/
+.width-center{
+	width:80%;
+	margin:0 auto;
+	text-align:center;
+}
+.clear-both{
+	clear:both;
+}
+
+/*轮播图*/
+			
+#obj>.banner>ul{width:80%; height:px;
+	margin:auto;
+}
+.banner>ul>li{
+	width:100%;
+	display:none;
+}
+.banner .ban-img{ text-align:center;
+	padding-left:0;
+	display:block;
+}
+.banner .ban-img>a>img{width:100%;}
+
+/*主体图片*/
+#obj .ong{width:1024px; height:1024px;
+	margin:10px auto;
+	padding-left:37px;
+	overflow: hidden;
+}
+.ong>.ong-left{float:left;}
+.ong-le-one{width:657px; height:328px;
+	background-image:url(../image/index/bigsofa1.jpg);
+	background-size:100%;
+}
+.ong-le-one:hover{
+	background-image:url(../image/index/bigsofa2.jpg);
+	transition: all 0.3s linear 0s
+}
+.ong-le-two{width:657px; height:328px;
+	background-image:url(../image/index/bigstool1.jpg);
+	background-size:100%;
+}
+.ong-le-two:hover{
+	background-image:url(../image/index/bigstool2.jpg);
+	transition: all 0.3s linear 0s
+}
+.ong-le-three{width:657px; height:328px;
+	background-image:url(../image/index/desk1.jpg);
+	background-size:100%;
+}
+.ong-le-three:hover{
+	background-image:url(../image/index/desk2.jpg);
+	transition: all 0.3s linear 0s
+}
+.ong>.ong-right{float:left;}
+				
+.ong>.ong-right img{width:327px;}
+.ong .ong-right-tw>img{height:653px;}
+
+/*关于我们*/
+#obj>.regard{
+	width:1024px; height:150px;
+	text-align:center;
+	margin:0 auto;
+	line-height:150px;
+	background:#f6f6f6;
+}
+#obj>.regard>a{
+font-size:14px; font-family:"微软雅黑";
+color:#bababa; border:1px solid #bababa;
+padding:5px 40px;
+}
+#obj>.regard>a:hover{
+	color:#fff; border:1px solid #333;
+	background:#333;
+}
+
+/*商品列表*/
+#obj>.shop{
+	width:1024px;
+	margin:auto;}
+#obj .commodity{
+	width:1024px;
+	margin:0 auto;
+	text-align:center;
+	padding:50px 0; 
+}
+#obj .commodity>h2{font:41px "华文新魏";}
+#obj .com-list{border:1px solid #666; 
+	width:1024px;
+	margin:0 auto;
+	margin-bottom:30px;
+}
+#obj .com-list>ul{
+	padding-left:30px;
+	height:31px;
+}
+#obj .com-list>ul>li{float:left;}
+#obj .com-list>ul>li>a{height:31px;line-height:31px;
+	padding:9px 12px;
+	font-size:14px; color:#808080;
+}
+#obj .com-list>ul>li>a:hover{
+	background-color:#fd5820;
+	color:#fff;
+}
+
+/*商品*/
+#obj .com-shop{width:1024px;}
+#obj .com-shop ul .clear-both{clear:both;}
+#obj .com-shop ul>li{float:left;
+	width:25%;
+	padding-bottom:50px;
+}
+#obj .com-shop ul>li img{
+	width:160px; height:160px;
+}
+#obj .com-shop ul>li>a>img:hover{
+	transition: all .3s linear;
+	transform:scale(1.1);
+}
+#obj .com-shop-name{
+	padding:6px 0;
+}
+#obj .com-shop-name>a{font-size:13px;
+	color:rgb(136,136,136);
+}
+#obj .com-shop-price{
+	font-size:22px; color:#191919;
+}
+
+/*广告标语*/
+#obj .advert{
+	width:1024px;
+	margin:66px auto;}
+#obj .img-left{float:left;
+	width:50%;
+}
+#obj .img-left>img{width:100%;}
+#obj .text-right{float:right; width:40%;}
+#obj .text-right>div{border-top:1px solid #e2e2e2;
+	text-align:right;
+	padding:25px 0;
+}
+#obj .text-right>div>h2{
+	font-size: 22px;
+	color: #ff6f00;
+	padding-bottom: 10px;
+}
+#obj .text-right>div>h2{
+	padding:2px;
+}
+#obj .text-right>.d2{text-align:left;
+	font-size:14px;
+	padding-top:48px;
+}
+
+/*透明背景 position: relative;*/
+
+#obj .club{
+	width:1024px;
+	position:relative;}
+#obj .back{
+	height:350px;
+	background-image:url("../image/index/bg-img.jpg");
+	background-size: cover;
+    background-attachment: fixed;
+}
+#obj .li-of-go{
+	position:absolute;
+	top:0%; left:38%;
+	z-index:3;
+	margin: 114.5px 0 30px;
+}
+#obj .li-of-go>h2{
+	font-size:24px;
+}
+
+/* 会员 */
+#obj .vip-shop{width:1024px;}
+#obj .vip-top{color:#222;
+	padding:70px 0 20px;
+}
+#obj .vip-top>h3{
+	font:32px "华文新魏";
+	padding-bottom:10px;
+}
+#obj .vip-top>p{
+	font:12px;
+}
+
+/*会员商品*/
+#obj .vip-top-shop{width:1024px; height:313px;
+	border:1px solid #000;
+	position: relative;
+	margin-bottom:20px;	overflow:hidden;
+}
+#obj .vip-img1{background-image:url("../image/index/bg_pro1.jpg");}
+#obj .vip-img1{
+	width: 100%; height:313px;
+    background-size:cover;
+	position: absolute;
+    top: 0;
+    left: 0;
+	z-index:1;
+	background-repeat:repeat;
+	transition: all 0.3s linear;
+}
+#obj .vip-img1:hover{
+	transform:scale(1.05);
+}
+#obj .vip-left{
+	width:313px;
+    background-color: #fff;
+	position: absolute;
+    top: 0;
+    left: 0;
+	z-index:3;
+	padding:30px;
+}
+#obj .vip-left a>img{
+	transition: all 0.3s linear;
+	width:100%;
+}
+#obj .vip-left a>img:hover{
+	transform:scale(1.05);
+}
+#obj .vip-left p,a{
+	font-size: 13px;
+    color: rgb(136,136,136);
+    text-align: center;
+    font-family: "宋体";
+}
+#obj .vip-left .vip-price{
+	font-size:19px; color:#191919;
+	margin-top:6px;
+}
+/*2*/
+#obj .vip-mid-shop{width:1024px; height:313px;
+	border:1px solid #000;
+	position: relative;
+	margin-bottom:20px;	overflow:hidden;
+}
+#obj .vip-img2{background-image:url("../image/index/bg_pro2.jpg");}
+#obj .vip-img2{
+	width: 100%; height:313px;
+    background-size:cover;
+	position: absolute;
+    top: 0;
+    left: 0;
+	z-index:1;
+	background-repeat:repeat;
+	transition: all 0.3s linear;
+}
+#obj .vip-img2:hover{
+	transform:scale(1.05);
+}
+#obj .vip-right{
+	width:313px;
+    background-color: #fff;
+	position: absolute;
+    top: 0;
+    right: 0;
+	z-index:3;
+	padding:30px;
+}
+#obj .vip-right a>img{
+	transition: all 0.3s linear;
+	width:100%;
+}
+#obj .vip-right a>img:hover{
+	transform:scale(1.05);
+}
+#obj .vip-right p,a{
+	font-size: 13px;
+    color: rgb(136,136,136);
+    text-align: center;
+    font-family: "宋体";
+}
+#obj .vip-right .vip-price{
+	font-size:19px; color:#191919;
+	margin-top:6px;
+}
+
+#obj .vip-bot{width:1024px;
+	height:278px;
+	border:1px solid #000;
+	margin-bottom:20px;	
+}
+.vip-bot-left{
+	float:left;
+}
+.vip-bot-left>a>img{
+	width:341px;
+}
+.vip-bot-right{
+	float:left;
+	width:50%;
+	padding:50px 20px 10px 50px;
+}
+.vip-bot-right>p{
+	height:100px;
+	color:#888888;
+	font-size:18px;
+}
+
+.vip-bot-right>a{
+	padding:12px 60px;
+	border: 1px solid rgb(186,186,186);
+	background-color: rgb(81,81,81);
+    color: #fff;
+}
+.vip-bot-right>a:hover{
+	background-color:#000;
+}
+

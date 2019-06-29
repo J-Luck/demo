@@ -1,0 +1,1 @@
+导入sql文件    mysql -uroot < 文件路径

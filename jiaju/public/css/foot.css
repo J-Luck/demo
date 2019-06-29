@@ -1,0 +1,30 @@
+
+/*脚部*/
+#footer{width:100%;height:324px;
+	background:#f2f2f2;
+	padding-top:60px;
+}
+#footer .foot-top{
+	width:1024px; height:208px;
+	margin:0 auto;
+	padding:0 40px;
+}
+#footer .foot-top>ul{
+	width:180px;height:162px;
+	float:left;
+}
+.foot-h3{color:#666;
+	font-size:16px;
+	margin-bottom:10px;}
+#footer .foot-top li{line-height:38px;
+	text-align:center;
+}
+#footer li a{color:#a5a5a5;}
+#footer li a:hover{color:#333;}
+#footer .foot-img1{width:100px;height:102px;}
+#footer .foot-img2{width:154px;height:33px;}
+#footer>.foot-bot{padding:20px; 
+	text-align:center;
+	color:#666;  font-family: arial;
+	font-size:12px;
+}
